@@ -1,0 +1,1 @@
+﻿Server=.\SQLEXPRESS;Database=p32_34_ef_config_db;Trusted_Connection=True;Encrypt=False;
