@@ -1,0 +1,13 @@
+{
+    "exclude": [
+        "**/bin",
+        "**/bower_components",
+        "**/jspm_packages",
+        "**/node_modules",
+        "**/obj",
+        "**/platforms"
+    ],
+    "ConnectionStrings": {
+        "express": "Server=.\\SQLEXPRESS;Database=p34_migration_1_db;Trusted_Connection=True;Encrypt=False;"
+    }
+}
