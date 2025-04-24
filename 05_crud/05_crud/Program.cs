@@ -1,4 +1,5 @@
-﻿using System.Xml;
+﻿using System.Linq.Expressions;
+using System.Xml;
 using _05_crud;
 
 
@@ -35,6 +36,80 @@ using _05_crud;
 
 //User user = db.Users.First(u => u.Id == 3);
 //Console.WriteLine(user);
+
+
+
+// using Db db = new Db();
+
+//IQueryable<User> users = db.Users
+//                                .Where(u => u.Age > 18);
+// SELECT * FROM users WHERE age > 18;
+
+//IEnumerable<User> users = db.Users
+//                            .Where(u => u.Age > 18)
+//                            .ToList()
+//                            .Where(u => u.Id > 2);
+
+
+// db.Users.AsEnumerable().Where(u => u.Age > 18);
+// SELECT * FROM users;
+
+
+// =====================================================
+//Func<User, bool> filter = u => u.Age > 18;
+//IEnumerable<User> users = db.Users.Where(filter);
+//// SELECT * FROM users;
+
+
+//Expression<Func<User, bool>> filter = u => u.Age > 18;
+//IQueryable<User> users = db.Users.Where(filter);
+// SELECT * FROM users WHERE age > 18;
+// =====================================================
+
+
+//var q0 = db.Users
+//            .Where(u => u.Age > 18)
+//            .AsEnumerable()
+//            .OrderBy(u => u.Email);
+//// SELECT * FROM users WHERE age > 18;
+
+//var q1 = db.Users
+//            .Where(u => u.Age > 18)
+//            .OrderBy(u => u.Email)
+//            .ToList();
+//// SELECT * FROM users WHERE age > 18 ORDER BY email;
+///
+
+
+//var q0 = db.Users
+//            .Where(u => u.Age > 18)
+//            .Select(u => new
+//            {
+//                UserId = u.Id,
+//                UserEmail = u.Email,
+//            })
+//            .AsEnumerable()
+//            .OrderBy(o => o.UserId);
+//// SELECT u.id AS [UserId], u.email AS [UserEmail] FROM users WHERE age > 18;
+
+
+//var q1 = db.Users
+//            .Where(u => u.Age > 18)
+//            .AsEnumerable()
+//            .Select(u => new
+//            {
+//                UserId = u.Id,
+//                UserEmail = u.Email,
+//            })
+//            .OrderBy(o => o.UserId);
+// SELECT * FROM users WHERE age > 18;
+
+
+
+
+
+
+
 
 
 
